@@ -2,8 +2,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
-import Contact from "./pages/Contact";
+import WoWDragons from "./pages/WoWDragons";
+import DnDDragons from "./pages/DnDDragons";
+import RuneterraDragons from "./pages/RuneterraDragons";
 import NoPage from "./pages/NoPage";
 
 //runs here https://e017a654378b46f2805a63be44f076d3.vfs.cloud9.us-west-1.amazonaws.com/
@@ -14,8 +15,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="wowDragons" element={<WoWDragons />} />
+          <Route path="dndDragons" element={<DnDDragons />} />
+          <Route path="runeterraDragons" element={<RuneterraDragons />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
