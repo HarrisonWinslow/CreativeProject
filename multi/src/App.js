@@ -4,6 +4,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import WoWDragons from "./pages/WoWDragons";
 import DnDDragons from "./pages/DnDDragons";
+import MonsterFetcher from "./pages/MonsterFetcher";
 import RuneterraDragons from "./pages/RuneterraDragons";
 import NoPage from "./pages/NoPage";
 
@@ -17,7 +18,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="wowDragons" element={<WoWDragons />} />
           <Route path="dndDragons" element={<DnDDragons />} />
-          <Route path="runeterraDragons" element={<RuneterraDragons />} />
+          <Route path="monsterFetcher" element={<MonsterFetcher />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

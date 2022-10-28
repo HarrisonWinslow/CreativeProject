@@ -18,7 +18,7 @@ const Layout = () => {
             <Link to="/dndDragons">DnD Dragons</Link>
           </li>
           <li>
-            <Link to="/runeterraDragons">Runeterra Dragons</Link>
+            <Link to="/monsterFetcher">Monster Fetcher</Link>
           </li>
         </ul>
       </nav>
