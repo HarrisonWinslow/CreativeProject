@@ -1,21 +1,6 @@
-// import ScriptTag from 'react-script-tag';
+/* global fetch */
 
-const MonsterFetcher = () => {
-  return (
-        <div>
-        <form>
-          <p>Enter A Monster:</p>
-          <input type="text" id="monsterInput" defaultValue style={{backgroundColor: '#e7ba77'}} />
-          <br /><br />
-          <input id="submitButton" type="submit" defaultValue="Submit" />
-        </form>
-        <p id="monsterData" />
-        
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      </div>
-      );
-};
-
+console.log("yo"); //lol
 
 document.getElementById("submitButton").addEventListener("click", function(event) {
     event.preventDefault();
@@ -52,11 +37,11 @@ document.getElementById("submitButton").addEventListener("click", function(event
       	info += "<p class=\"monsterIntro\">";
       	info += "<text>Languages: " + json.languages + "</text><br>";
       	info += "<text>Senses: " + json.senses + "</text><br>";
-      	info += "<text>Skills: </text><br>";
+      	info += "<text>Skills: " + "</text><br>";
       	let skills = json.skills;
       	for(const skill in skills)
       	{
-      	    info += "<text style=\"white-space:pre\">&#9;" + skill + ": " + json.skills[skill] + "</text><br>";
+      	    info += "<text style=\"white-space:pre\">" + "&#9;" + skill + ": " + json.skills[skill] + "</text><br>";
       	}
       	info += "<text>Damage Vulnerabilities: " + json.damage_vulnerabilities + "</text><br>";
       	info += "<text>Damage Resistances: " + json.damage_resistances + "</text><br>";
@@ -69,7 +54,7 @@ document.getElementById("submitButton").addEventListener("click", function(event
       	info += "<p class=\"monsterActions\">";
       	
       	//LEGENDARY ACTIONS
-      	if(json.legendary_actions.length !== 0)
+      	if(json.legendary_actions.length != 0)
       	{
       	    info += "<p style=\"text-align:center; font-weight:bold\"><u>Legendary Actions:</u><br> " + json.legendary_desc + "</p><br>";
       	    info += "<p>"
@@ -83,9 +68,9 @@ document.getElementById("submitButton").addEventListener("click", function(event
       	info += "<br><br>";
       	
       	//ACTIONS
-      	if(json.actions.length !== 0)
+      	if(json.actions.length != 0)
       	{
-      	    info += "<p style=\"text-align:center; font-weight:bold\"><u>Actions:</u></p><br>";
+      	    info += "<p style=\"text-align:center; font-weight:bold\"><u>Actions:</u>" + "</p><br>";
       	    info += "<p>"
       	    for(let i = 0; i < json.actions.length; i++)
       	    {
@@ -97,9 +82,9 @@ document.getElementById("submitButton").addEventListener("click", function(event
       	info += "<br><br>";
       	
       	//SPELLS
-      	if(json.spell_list.length !== 0)
+      	if(json.spell_list.length != 0)
       	{
-      	    info += "<p style=\"text-align:center; font-weight:bold\"><u>Spells:</u></p><br>";
+      	    info += "<p style=\"text-align:center; font-weight:bold\"><u>Spells:</u>" + "</p><br>";
       	    for(let i = 0; i < json.spell_list.length; i++)
       	    {
       	        //another fetch for spells
@@ -124,5 +109,3 @@ document.getElementById("submitButton").addEventListener("click", function(event
         document.getElementById("monsterData").innerHTML = "<h2 class=\"monsterHeader\">Monster Not Found :(</h2>";
     });
 });
-
-export default MonsterFetcher;
