@@ -18,7 +18,7 @@ const Layout = () => {
             <Link to="/dndDragons">DnD Dragons</Link>
           </li>
           <li>
-            <Link to="/monsterFetcher">Monster Fetcher</Link>
+            <Link to="/diceRoller">Dice Roller</Link>
           </li>
         </ul>
       </nav>
@@ -41,6 +41,7 @@ const Layout = () => {
           </button>
         </div>
         <div className="text-center text-white p-3" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
+          <a href="https://github.com/HarrisonWinslow/CreativeProject" rel="noreferrer">The github repo</a> <br />
           Site made by Harrison Winslow and Joseph Paulson
         </div>
       </footer>

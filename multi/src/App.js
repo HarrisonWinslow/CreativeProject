@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import WoWDragons from "./pages/WoWDragons";
 import DnDDragons from "./pages/DnDDragons";
 import MonsterFetcher from "./pages/MonsterFetcher";
+import DiceRoller from "./pages/DiceRoller";
 import RuneterraDragons from "./pages/RuneterraDragons";
 import NoPage from "./pages/NoPage";
 
@@ -18,8 +19,9 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="wowDragons" element={<WoWDragons />} />
           <Route path="dndDragons" element={<DnDDragons />} />
-          <Route path="monsterFetcher" element={<MonsterFetcher />} />
+          <Route path="diceRoller" element={<DiceRoller />} />
           <Route path="*" element={<NoPage />} />
+          <Route path='githubRepo' component={() => window.location = 'https://github.com/HarrisonWinslow/CreativeProject'}/>
         </Route>
       </Routes>
     </BrowserRouter>

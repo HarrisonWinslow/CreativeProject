@@ -390,7 +390,16 @@ form {
   margin-top:150px;
 }
 
+.die {
+  height: 150px;
+  border-radius: 50px;
+}
 
+.die-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
